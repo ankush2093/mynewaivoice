@@ -1,0 +1,11 @@
+version: 1
+services:
+  - type: web
+    name: audio-separator
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    setupCommand: ./setup.sh # Add this line to run the setup script
+    runtime: node
+    plan: free
+    autoDeploy: true
